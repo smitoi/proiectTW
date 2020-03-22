@@ -4,6 +4,8 @@
   padding: 15px;
   margin-top: 15px;
   background-color: midnightblue;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
 }
 
 .title-paragraph-on-blue {

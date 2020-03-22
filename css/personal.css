@@ -4,6 +4,8 @@
 }
 
 .person-image {
+  border: 3px solid midnightblue;
+  border-radius: 50%;
   opacity: 1;
   display: block;
   width: 100%;
@@ -35,6 +37,7 @@
   color: white;
   font-size: 16px;
   padding: 16px;
+  border-radius: 10%;
 }
 
 .personal-table {
@@ -54,13 +57,93 @@
   margin-bottom: 5%;
 }
 
+.dropdown-menu-button {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.dropdown {
+  width: 20%;
+  margin-right: 40%;
+  margin-left: 40%;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu-item {
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-menu-item a {
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu-item a:hover
+{
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu-item {
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu-button {
+  background-color: midnightblue;
+  color: white;
+}
+
+#personal-militari {
+  display: none;
+}
+
+#personal-tineretului {
+  display: none;
+}
+
+#personal-auxiliar {
+  display: none;
+}
+
+@media all and (min-width: 640px) and (max-width: 1024px) {
+  .text {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+
 @media all and (max-width: 640px) {
+  .dropdown {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
   .personal-row {
     margin-bottom: 0%;
   }
   .person {
     width: 100%;
     margin-bottom: 5%;
+  }
+  .person-image {
+    border-radius: 10%;
   }
   .personal-row {
     flex-direction: column;
