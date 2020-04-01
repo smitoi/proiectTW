@@ -25,7 +25,8 @@
 
 .image-text {
   width: 100%;
-  background-color: midnightblue;
+  border-radius: 0px 0px 20px 20px;
+  background: linear-gradient(0deg, rgba(64,71,109,1) 0%, rgba(138,156,255,1) 100%);
 }
 
 .presentation-text {
@@ -35,7 +36,7 @@
   text-align: center;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 768px) {
   .reclama-image {
     flex-direction: column;
   }
