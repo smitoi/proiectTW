@@ -42,11 +42,11 @@
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  transition: 0.3s;
+  transition-duration: 0.4s;
 }
 
 .menu-item:hover {
-  background: linear-gradient(90deg, rgba(64,71,109,1) 0%, rgba(73,88,168,1) 100%);
+  background: #40476d;
   color: white;
 }
 
