@@ -35,6 +35,8 @@
   <div class="instructiuni">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus. Cras a auctor ipsum, eu aliquet nunc. Cras accumsan orci non est auctor porttitor. Praesent luctus mollis scelerisque. Etiam congue arcu mi, a sagittis nisi iaculis et. Suspendisse non nunc aliquam, imperdiet enim eget, placerat magna. Nunc vitae eleifend augue. Vestibulum malesuada ac nulla et pharetra. Ut pretium ipsum ut arcu dictum hendrerit. Suspendisse tempus turpis vitae metus venenatis volutpat. Nunc consequat turpis quis velit blandit porttitor in sed urna. Nunc id fermentum metus. Nunc ut magna congue, scelerisque turpis sit amet, feugiat libero. Vivamus cursus felis sit amet aliquam imperdiet.
   </div>
+  <div class="rezultat">
+  </div>
   <div class="quiz-prepare">
     <button class="buton" onclick="prepare_quiz(1)">TEST CATEGORIA A</button>
     <button class="buton" onclick="prepare_quiz(2)">TEST CATEGORIA B</button>
@@ -42,7 +44,7 @@
   </div>
   <div class="quiz">
     <div class="stats">
-      <p class="timp-ramas">TIMP RĂMAS: <span id="RT">00:00</span></p>
+      <p class="timp-ramas">TIMP RĂMAS: <span id="RT"></span></p>
       <p class="intrebari-ramase">ÎNTREBĂRI RĂMASE: <span id="RQ"></span></p>
       <p class="intrebari-corecte">ÎNTREBĂRI CORECTE: <span id="CQ"></span></p>
       <p class="intrebari-gresite">ÎNTREBĂRI GREȘITE: <span id="WQ"></span></p>
@@ -51,16 +53,20 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus.
     </div>
     <div class= "quiz-questions">
-      <button class="buton-quiz" id="buton1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </button>
-      <button class="buton-quiz" id="buton2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </button>
-      <button class="buton-quiz" id="buton3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </button>
-      <img src="" class="quiz-image">
+      <div class ="quiz-buttons">
+        <button class="buton-quiz" id="buton1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </button>
+        <button class="buton-quiz" id="buton2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </button>
+        <button class="buton-quiz" id="buton3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </button>
+      </div>
+      <div class="quiz-image">
+        <img src="images/street1.jpg" id="qimage">
+      </div>
     </div>
     <div class="quiz-control">
       <button class="buton-control gray-btn" id="skip_intrebare">
