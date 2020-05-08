@@ -6,37 +6,43 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
 
 
 
-## GOALS:
+## Tasks (English):
 
-- [x] Basic HTML / CSS
+### HTML/CSS:
 
-- [x] Make the HTML / CSS repsonsive + CSS animation
+  - [x] Static website using pure HTML / CSS
+  - [x] Make website responsive + add animation
 
+### JavaScript:
 - [x] Dropdown menu with JavaScript
+  - [x] Make dropdown menu dynamically generated using a database (simulated using a .json file and AJAX requests).
 
 - [x] Quiz app with JavaScript
+  - [x] Make quiz app responsive.
+  - [x] Add support for questions with images.
+  - [x] Add timer for quiz.
+  - [ ] Get questions from database (simulated using a .json file and AJAX requests).
+  - [ ] Local storage for quiz results.
+  - [ ] Add support for additional answers.
 
-- [x] Make quiz app responsive + add support for questions with images
+### NodeJs + Additional tasks:
+  - [ ] Port the AJAX requests to NodeJS
+  - [ ] User login system:
+    - [ ] Make login system (either register, or an admin panel to add users).
+    - [ ] Different user privileges (Guest, User, Employee, Admin).
+    - [ ] Check failed login attempts.
+    - [ ] Logging actions (view page, take quiz, etc.).
+    - [ ] Generate page based on template (for Employees).
+    - [ ] Showing IP and timestamp of last login.
 
-- [x] Add timer for quiz
-
-- [ ] Generate questions with Python script
-
-- [ ] Read questions from .JSON + shuffle them
-
-- [ ] Local storage for quiz results
-
-- [ ] Add support for additional answers
-
-- [ ] NodeJS (maybe a login system with keeping track of quizes)
-
-- [x] Run the code through a beautify
-
-- [ ] Make the code a little more readable
+### Quality of Life:
+  - [ ] Make the code a little more readable
 
 ## RESOURCES:
+  * https://github.com/WebToLearn/laborator-tehnici-web
   * https://www.w3schools.com/ 
   * https://www.freecodecamp.org/
   * https://stackoverflow.com/
   * https://codepen.io/
   * https://joshzeigler.com/technology/web-development/how-big-is-too-big-for-json
+  * https://jsoneditoronline.org/
