@@ -21,12 +21,12 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Make quiz app responsive.
   - [x] Add support for questions with images.
   - [x] Add timer for quiz.
-  - [ ] Get questions from database (simulated using a .json file and AJAX requests).
+  - [x] Get questions from database (simulated using a .json file and AJAX requests).
   - [ ] Local storage for quiz results.
   - [ ] Add support for additional answers.
 
 ### NodeJs + Additional tasks:
-  - [ ] Port the AJAX requests to NodeJS
+  - [x] Port the AJAX requests to NodeJS
   - [ ] User login system:
     - [ ] Make login system (either register, or an admin panel to add users).
     - [ ] Different user privileges (Guest, User, Employee, Admin).
