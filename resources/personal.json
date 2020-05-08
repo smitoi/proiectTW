@@ -1,0 +1,126 @@
+{
+  "personal": {
+    "militari": [
+      {
+        "img": "images/person-militari.png",
+        "nume": "Ion Popescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-militari.png",
+        "nume": "Alex Breban",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-militari.png",
+        "nume": "Calin Olinescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-militari.png",
+        "nume": "Gabi Goga",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      }
+    ],
+    "tineretului": [
+      {
+        "img": "images/person-tineretului.png",
+        "nume": "Ion Popescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-tineretului.png",
+        "nume": "Luca Diaconu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-tineretului.png",
+        "nume": "Gabi Goga",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      }
+    ],
+    "auxiliar": [
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Ion Popescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Gabi Goga",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Calin Olinescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Serghei Iagar",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Florentin Nistor",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Glad Adamache",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Simion Cretu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      }
+    ],
+    "primaverii": [
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Ion Popescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Calin Olinescu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Florentin Nistor",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Glad Adamache",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      },
+      {
+        "img": "images/person-auxiliar.png",
+        "nume": "Simion Cretu",
+        "numar": "077 5559 7330",
+        "masina": "Dacia Logan"
+      }
+    ]
+  }
+}

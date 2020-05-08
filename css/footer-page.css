@@ -1,4 +1,4 @@
-.footer {
+#footer {
      display: flex;
      justify-content: space-around;
      padding: 15px;
@@ -17,11 +17,10 @@
      font-size: 15px;
 }
  @media all and (max-width: 768px) {
-     .footer {
+     #footer {
          flex-direction: column;
     }
      .paragraph-on-blue {
          text-align: center;
     }
 }
- 

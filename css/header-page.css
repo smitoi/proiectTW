@@ -1,4 +1,4 @@
-.header {
+#header {
      padding-bottom: 25px;
      padding-top: 25px;
      margin-top: 0;
@@ -17,7 +17,7 @@
  .title {
      font-size: 64px;
 }
- .menu {
+ #menu {
      padding-top: 3%;
      padding-bottom: 3%;
      margin: auto;
@@ -48,7 +48,7 @@
      color: white;
 }
  @media all and (max-width: 768px) {
-     .menu {
+     #menu {
          flex-direction: column;
          justify-content: space-between;
     }
@@ -63,4 +63,3 @@
          font-size: 32px;
     }
 }
- 

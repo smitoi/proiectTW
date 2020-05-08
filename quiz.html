@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/header-page.css">
     <link rel="stylesheet" href="css/footer-page.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/legislatie.css">
+    <link rel="stylesheet" href="css/quiz.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/quiz.js"></script>
     <title>Școala Best Auto</title>
@@ -19,7 +19,7 @@
 
 <body>
 
-    <header class="header">
+    <header id="header">
         <h1 class="title">Școala Best Auto</h1>
         <br>
         <h3 class="subtitle">☎️ 077 5559 7330</h3>
@@ -29,34 +29,34 @@
         <h3 class="subtitle">📧 tineretului@bestauto.ro</h3>
     </header>
 
-    <nav class="menu">
+    <nav id="menu">
         <a class="menu-item" href="index.html">Acasă</a>
         <a class="menu-item" href="permis.html">Permis auto</a>
-        <a class="menu-item menu-item-active" href="legislatie.html">Legislație rutieră</a>
+        <a class="menu-item menu-item-active" href="utilizatori.html">Utilizatori</a>
         <a class="menu-item" href="personal.html">Personal</a>
     </nav>
-    <div class="instructiuni">
+    <div id="instructiuni">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus. Cras a auctor ipsum, eu aliquet nunc. Cras accumsan orci non est auctor porttitor. Praesent luctus mollis scelerisque. Etiam congue arcu mi, a sagittis nisi iaculis et. Suspendisse non nunc aliquam, imperdiet enim eget, placerat magna. Nunc vitae eleifend augue. Vestibulum malesuada ac nulla et pharetra. Ut pretium ipsum ut arcu dictum hendrerit. Suspendisse tempus turpis vitae metus venenatis volutpat. Nunc consequat turpis quis velit blandit porttitor in sed urna. Nunc id fermentum metus. Nunc ut magna congue, scelerisque turpis sit amet, feugiat libero. Vivamus cursus felis sit amet aliquam imperdiet.
     </div>
-    <div class="rezultat">
+    <div id="rezultat">
     </div>
-    <div class="quiz-prepare">
+    <div id="quiz-prepare">
         <button class="buton" onclick="prepare_quiz(1)">TEST CATEGORIA A</button>
         <button class="buton" onclick="prepare_quiz(2)">TEST CATEGORIA B</button>
         <button class="buton" onclick="prepare_quiz(3)">TEST CATEGORIA X</button>
     </div>
-    <div class="quiz">
-        <div class="stats">
-            <p class="timp-ramas">TIMP RĂMAS: <span id="RT"></span></p>
-            <p class="intrebari-ramase">ÎNTREBĂRI RĂMASE: <span id="RQ"></span></p>
-            <p class="intrebari-corecte">ÎNTREBĂRI CORECTE: <span id="CQ"></span></p>
-            <p class="intrebari-gresite">ÎNTREBĂRI GREȘITE: <span id="WQ"></span></p>
+    <div id="quiz">
+        <div id="stats">
+            <p id="timp-ramas">TIMP RĂMAS: <span id="RT"></span></p>
+            <p id="intrebari-ramase">ÎNTREBĂRI RĂMASE: <span id="RQ"></span></p>
+            <p id="intrebari-corecte">ÎNTREBĂRI CORECTE: <span id="CQ"></span></p>
+            <p id="intrebari-gresite">ÎNTREBĂRI GREȘITE: <span id="WQ"></span></p>
         </div>
         <div id="question">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus.
         </div>
-        <div class="quiz-questions">
-            <div class="quiz-buttons">
+        <div id="quiz-questions">
+            <div id="quiz-buttons">
                 <button class="buton-quiz" id="buton1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </button>
@@ -67,11 +67,11 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </button>
             </div>
-            <div class="quiz-image">
+            <div id="quiz-image">
                 <img src="images/street1.jpg" id="qimage">
             </div>
         </div>
-        <div class="quiz-control">
+        <div id="quiz-control">
             <button class="buton-control gray-btn" id="skip_intrebare">
                 RĂSPUNDE MAI TÂRZIU
             </button>
@@ -85,8 +85,8 @@
     </div>
     <br>
     <br>
-    <footer class="footer">
-        <div class="program">
+    <footer id="footer">
+        <div id="program">
             <p class="title-paragraph-on-blue"><b>PROGRAM:</b></p>
             <p class="paragraph-on-blue">Luni: 08:00 - 17:00</p>
             <p class="paragraph-on-blue">Marți: 09:00 - 15:00</p>
@@ -96,17 +96,16 @@
             <p class="paragraph-on-blue">Sâmbătă: 10:00 - 14:00</p>
             <p class="paragraph-on-blue">Duminică: ÎNCHIS</p>
         </div>
-        <div class="adresa">
+        <div id="adresa">
             <p class="title-paragraph-on-blue"><b>ADRESĂ ȘI INFORMAȚII DE CONTACT:</b></p>
             <p class="title-paragraph-on-blue"><b> Sediu Militari:</b></p>
-            <p class="paragraph-on-blue">Adresă: Mun. București, Sector 6, Str. Cernișoarei, bl. 78, sc. 1, et. 4, ap. 32
-                <p>
-                    <p class="paragraph-on-blue">Număr telefon: 077 5559 7330</p>
-                    <p class="paragraph-on-blue">e-mail: militari@bestauto.ro</p>
-                    <p class="title-paragraph-on-blue"><b> Sediu Tineretului: </b></p>
-                    <p class="paragraph-on-blue">Adresă: Mun. București, Sector 4, Str. Spineni, A2</p>
-                    <p class="paragraph-on-blue">Număr telefon: 078 5551 3512</p>
-                    <p class="paragraph-on-blue">e-mail: tineretului@bestauto.ro</p>
+            <p class="paragraph-on-blue">Adresă: Mun. București, Sector 6, Str. Cernișoarei, bl. 78, sc. 1, et. 4, ap. 32</p>
+            <p class="paragraph-on-blue">Număr telefon: 077 5559 7330</p>
+            <p class="paragraph-on-blue">e-mail: militari@bestauto.ro</p>
+            <p class="title-paragraph-on-blue"><b> Sediu Tineretului: </b></p>
+            <p class="paragraph-on-blue">Adresă: Mun. București, Sector 4, Str. Spineni, A2</p>
+            <p class="paragraph-on-blue">Număr telefon: 078 5551 3512</p>
+            <p class="paragraph-on-blue">e-mail: tineretului@bestauto.ro</p>
         </div>
 
     </footer>

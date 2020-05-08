@@ -20,9 +20,9 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
 
 - [x] Add timer for quiz
 
-- [ ] Read questions from .JSON + shuffle them
+- [x] Read questions from .JSON + shuffle them
 
-- [ ] Local storage for quiz results
+- [x] Local storage for quiz results
 
 - [ ] Add support for additional answers
 
