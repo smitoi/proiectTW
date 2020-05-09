@@ -22,21 +22,22 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Add support for questions with images.
   - [x] Add timer for quiz.
   - [x] Get questions from database (simulated using a .json file and AJAX requests).
-  - [ ] Local storage for quiz results.
+  - [x] Local storage for quiz results.
   - [ ] Add support for additional answers.
 
 ### NodeJs + Additional tasks:
   - [x] Port the AJAX requests to NodeJS
-  - [ ] User login system:
-    - [ ] Make login system (either register, or an admin panel to add users).
+  - [x] User login system:
+    - [x] Make login system (register).
+    - [ ] Add admin panel for user control.
     - [ ] Different user privileges (Guest, User, Employee, Admin).
-    - [ ] Check failed login attempts.
+    - [x] Check failed login attempts.
     - [ ] Logging actions (view page, take quiz, etc.).
     - [ ] Generate page based on template (for Employees).
     - [ ] Showing IP and timestamp of last login.
 
 ### Quality of Life:
-  - [ ] Make the code a little more readable
+  - [x] Make / keep the code a little more readable.
 
 ## RESOURCES:
   * https://github.com/WebToLearn/laborator-tehnici-web
