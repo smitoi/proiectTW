@@ -15,7 +15,9 @@ var contor;
 var timp;
 var minute;
 var secunde;
+var rezultate;
 
+// Preluăm întrebările
 function getQuestions () {
   fetch('http://localhost:3000/questions').then(function(response) {
       if (response.status !== 200) {
@@ -29,6 +31,7 @@ function getQuestions () {
   })
 }
 
+// Pregătim quiz-ul
 function prepare_quiz(optiune) {
     var extrase = [];
 
@@ -91,6 +94,7 @@ function prepare_quiz(optiune) {
     load_question();
 }
 
+// Timer-ul se schimbă la fiecare secundă
 function timer() {
     document.getElementById("RT").innerHTML = "";
     if (minute < 10)
@@ -113,6 +117,7 @@ function timer() {
         }
 }
 
+// Marcăm întrebarea (a fost selectată)
 function mark_question(optiune) {
     document.getElementById(optiune).style.color = "white";
     document.getElementById(optiune).style.backgroundColor = "#40476d";
@@ -128,26 +133,63 @@ function mark_question(optiune) {
             answers_selected.push(3);
 }
 
+// Încheiem quiz-ul și afișăm rezultatul
 function end_quiz(why) {
-    let rezultat = document.getElementById("rezultat");
-    rezultat.style.display = "block";
+    let rezList = document.getElementById("rezultat");
+    let rezultat = document.createElement("li");
+    let dat = new Date();
+
+    rezultat.style.display = "flex";
+    if (dat.getDate() < 10)
+      rezultat.innerHTML = "0" + dat.getDate();
+    else
+      rezultat.innerHTML = dat.getDate();
+      if ((dat.getMonth() + 1) < 10)
+        rezultat.innerHTML += "/0" + (dat.getMonth() + 1);
+      else
+        rezultat.innerHTML += "/" + (dat.getMonth() + 1);
+    rezultat.innerHTML += "/" + dat.getFullYear()  + " - ";
+    if (dat.getHours() < 10)
+      rezultat.innerHTML += "0" + dat.getHours();
+    else
+      rezultat.innerHTML += dat.getHours();
+    if (dat.getMinutes() < 10)
+      rezultat.innerHTML += ":0" + dat.getMinutes();
+    else
+      rezultat.innerHTML += ":" + dat.getMinutes();
+    if (dat.getSeconds() < 10)
+      rezultat.innerHTML += ":0" + dat.getSeconds();
+    else
+      rezultat.innerHTML += ":" + dat.getSeconds();
+    rezultat.innerHTML += " - " + "REZULTAT ";
+    if (questions_total == 20)
+      rezultat.innerHTML += "CAT. A:";
+    else if (questions_total == 26)
+      rezultat.innerHTML += "CAT. B:";
+    else if (questions_total == 5)
+      rezultat.innerHTML += "CAT. X:";
+
     if (why == "time") {
         rezultat.style.color = "#940f0f";
-        rezultat.innerHTML = "REZULTAT: Timpul a expirat, ai picat!";
+        rezultat.innerHTML += " Timpul a expirat, ai picat!";
         alert("Timpul a expirat!");
     } else {
         clearTimeout(contor);
         if (questions_wrong >= maxim_wrong) {
             rezultat.style.color = "#940f0f";
-            rezultat.innerHTML = "REZULTAT: Ai picat cu " + questions_corect + '/' + questions_total + '.';
+            rezultat.innerHTML += " Ai picat cu " + questions_corect + '/' + questions_total + '.';
             alert("Ai picat cu " + questions_corect + '/' + questions_total + '.');
 
         } else if (questions_remaining == 0) {
             rezultat.style.color = "#0f9442";
-            rezultat.innerHTML = "REZULTAT: Ai luat sala cu " + questions_corect + '/' + questions_total + '.';
+            rezultat.innerHTML += " Ai luat sala cu " + questions_corect + '/' + questions_total + '.';
             alert("Ai luat sala cu " + questions_corect + '/' + questions_total + '.');
         }
     }
+
+    rezList.appendChild(rezultat);
+    rezList.style.display = "flex";
+    localStorage.setItem('list', JSON.stringify(rezList.innerHTML));
     clearInterval(timp);
     clearTimeout(contor);
     var butoane = document.getElementById("quiz-prepare");
@@ -228,6 +270,12 @@ function skip_question() {
 
 window.onload = function() {
   getQuestions();
+
+  let rezList = document.getElementById("rezultat");
+  rezList.style.display = "flex";
+  if (localStorage.getItem('list'))
+    rezList.innerHTML = JSON.parse(localStorage.getItem('list'));
+
   var butoane = document.getElementById("quiz");
   butoane.style.display = "none";
   document.getElementById("skip_intrebare").addEventListener("click", () => {

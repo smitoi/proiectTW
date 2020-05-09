@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="ro">
-<style>
-
-</style>
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +8,10 @@
     <link rel="stylesheet" href="css/header-page.css">
     <link rel="stylesheet" href="css/footer-page.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/legislatie.css">
+    <link rel="stylesheet" href="css/utilizatori.css">
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/quiz.js"></script>
     <title>Școala Best Auto</title>
 </head>
 
@@ -37,6 +35,15 @@
     </nav>
 
     <br>
+  <div id="form">
+    <form id="login-form">
+      <input id = "username" type="text" placeholder="nume de utilizator"/>
+      <input id = "password" type="password" placeholder="parolă"/>
+      <p id = "eroare"></p>
+      <button type='button' id ="login">login</button>
+      <button type='button' id ="register">înregistrare</button>
+    </form>
+  </div>
     <br>
     <footer id="footer">
         <div id="program">

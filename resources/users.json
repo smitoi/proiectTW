@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "username": "smitoi",
+            "password": "smitoi"
+        },
+        {
+            "username": "mefan",
+            "password": "parola"
+        },
+        {
+            "username": "nume",
+            "password": "parola"
+        },
+        {
+            "username": "stefan",
+            "password": "parola"
+        }
+    ]
+}

@@ -45,21 +45,21 @@
 }
 
 @media all and (max-width: 768px) {
-     .transition {
+     #transition {
          height: 150px;
          width: 60%;
     }
 }
 
 @media all and (min-width: 768px) and (max-width: 1280px) {
-     .transition {
+     #transition {
          height: 400px;
          width: 60%;
     }
 }
 
 @media all and (min-width: 1280px) {
-     .transition {
+     #transition {
          width: 80%;
     }
 }

@@ -68,11 +68,10 @@ function getPersonal () {
         console.log('Looks like there was a problem. Status Code: ' + response.status);
         return;
       }
-        response.json().then(function(data) {
-          console.log(data);
-          personal = data;
-          drawPersonal();
-          drawButtons();
+      response.json().then(function(data) {
+        personal = data;
+        drawPersonal();
+        drawButtons();
     });
   })
 }

@@ -31,7 +31,7 @@
      text-align: center;
 }
  @media all and (max-width: 768px) {
-     .reclama-image {
+     #reclama-image {
          flex-direction: column;
     }
      .car-presentation {

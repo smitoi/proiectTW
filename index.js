@@ -28,11 +28,59 @@ app.get("/questions", (req, res) => {
   }
 });
 
+app.get("/users", (req, res) => {
+  const users = readJSONFile('Users');
+  if(users != undefined){
+    res.status(200).send(users);
+  } else {
+    res.status(404).send("Nu s-a găsit - users");
+  }
+});
+
+app.post("/users", (req, res) => {
+    const users = readJSONFile('Users');
+    var user = {
+        username: req.body.username,
+        password: req.body.password
+    }
+    console.log(user);
+
+    for (let i = 0; i < users.length; i++)
+      if (users[i].username == user.username)
+      {
+        res.status(409).send(false);
+        return ;
+      }
+
+    users.push(user);
+    writeJSONFile(users, 'Users');
+    res.status(200).send(user);
+});
+
 function readJSONFile(optiune) {
 	if (optiune == 'Personal')
 		return JSON.parse(fs.readFileSync("resources/personal.json"))["personal"];
 	else if (optiune == 'Questions')
 		return JSON.parse(fs.readFileSync("resources/questions.json"))["questions"];
+  else if (optiune == 'Users')
+    return JSON.parse(fs.readFileSync("resources/users.json"))["users"];
+}
+
+function writeJSONFile(content, optiune) {
+  if (optiune == 'Users')
+  {
+    fs.writeFileSync(
+      "resources/users.json",
+      JSON.stringify({ users : content }, null, 4),
+      "utf8",
+      err => {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+  }
+
 }
 
 app.listen("3000", () =>
