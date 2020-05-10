@@ -101,7 +101,6 @@ function register() {
   }
 
   var newUser = {
-    type: create,
     username: document.getElementById("username").value,
     password: document.getElementById("password").value,
     privilege: "user",
@@ -131,6 +130,11 @@ function register() {
 }
 
 window.onload = function() {
+  if (localStorage.getItem('username')) {
+    window.location.href = 'user-panel.html';
+    return ;
+  }
+
   eroare = document.getElementById('eroare');
 
   document.getElementById("login").addEventListener("click", () => {
