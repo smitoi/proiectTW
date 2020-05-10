@@ -138,6 +138,7 @@ function end_quiz(why) {
     let rezList = document.getElementById("rezultat");
     let rezultat = document.createElement("li");
     let dat = new Date();
+    let aux = false;
 
     rezultat.style.display = "flex";
     if (dat.getDate() < 10)
@@ -161,7 +162,7 @@ function end_quiz(why) {
       rezultat.innerHTML += ":0" + dat.getSeconds();
     else
       rezultat.innerHTML += ":" + dat.getSeconds();
-    rezultat.innerHTML += " - " + "REZULTAT ";
+    rezultat.innerHTML += " - " + "REZULTAT USER " + localStorage.getItem('username') + " ";
     if (questions_total == 20)
       rezultat.innerHTML += "CAT. A:";
     else if (questions_total == 26)
@@ -181,6 +182,7 @@ function end_quiz(why) {
             alert("Ai picat cu " + questions_corect + '/' + questions_total + '.');
 
         } else if (questions_remaining == 0) {
+            aux = true;
             rezultat.style.color = "#0f9442";
             rezultat.innerHTML += " Ai luat sala cu " + questions_corect + '/' + questions_total + '.';
             alert("Ai luat sala cu " + questions_corect + '/' + questions_total + '.');
@@ -196,6 +198,44 @@ function end_quiz(why) {
     butoane.style.display = "flex";
     var butoane = document.getElementById("quiz");
     butoane.style.display = "none";
+
+    let userRetrive = {
+      type: 'retrive',
+      username: localStorage.getItem('username')
+    };
+
+    fetch('http://localhost:3000/users', {
+      method: "post",
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userRetrive)
+    }).then(function(response) {
+      return response.json();
+    }).then((json) => {
+      if (aux == true) {
+        var userUpdate = {
+          type: 'update',
+          username: localStorage.getItem('username'),
+          quizP: 1
+        }
+      }
+      else {
+        var userUpdate = {
+          type: 'update',
+          username: localStorage.getItem('username'),
+          quizF: 1
+        }
+      }
+      fetch('http://localhost:3000/users', {
+        method: "post",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userUpdate)
+      }).then(function(response) {})
+
+    })
 }
 
 function load_question() {

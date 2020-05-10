@@ -70,7 +70,12 @@
      margin-right: 10%;
      margin-left: 10%;
      margin-bottom: 2%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
 }
+
  .buton {
      background-color: #40476d;
      border: none;

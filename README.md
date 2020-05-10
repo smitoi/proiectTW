@@ -28,16 +28,21 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
 ### NodeJs + Additional tasks:
   - [x] Port the AJAX requests to NodeJS
   - [x] User login system:
-    - [x] Make login system (register).
+    - [x] Make login system (register + login).
+	- [x] Create user panel.
     - [ ] Add admin panel for user control.
-    - [ ] Different user privileges (Guest, User, Employee, Admin).
+    - [x] Different user privileges (Guest, User, Employee, Admin).
     - [x] Check failed login attempts.
     - [ ] Logging actions (view page, take quiz, etc.).
     - [ ] Generate page based on template (for Employees).
-    - [ ] Showing IP and timestamp of last login.
+    - [x] Showing timestamp of last login.
+	- [ ] Show IP of last login.
+	- [ ] Add some animations on the website.
 
 ### Quality of Life:
   - [x] Make / keep the code a little more readable.
+
+### Note: Not all of the tasks listed above will be completed by the time I turn in the project. Maybe some of them will be never completed and get lost in time, like tears in the rain.
 
 ## RESOURCES:
   * https://github.com/WebToLearn/laborator-tehnici-web

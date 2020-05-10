@@ -12,7 +12,6 @@ function try_login() {
 
   if (verify(user, pass))
   {
-    console.log("CEVA");
     eroare.style.color = 'red';
     eroare.innerHTML = "Numele și parola sunt invalide (conțin spații).";
     return ;
@@ -32,7 +31,7 @@ function try_login() {
           if (user == data[i].username) {
             if (pass == data[i].password)
             {
-              contCorect = true;
+              contCorect = data[i].privilege;
               break;
             }
             else {
@@ -40,16 +39,24 @@ function try_login() {
             }
           }
         }
-
-        if (contCorect == 1) {
+        if (contCorect != false) {
           eroare.style.color = 'green';
           eroare.innerHTML = "Contul este corect. Veți fi redirecționat.";
           document.getElementById("username").readOnly = true;
           document.getElementById("password").readOnly = true;
+          localStorage.setItem('username', user);
+          localStorage.setItem('password', pass);
+          localStorage.setItem('privilege', contCorect);
+          localStorage.setItem('incercari', 0);
+          setTimeout(function() {
+            window.location.href = 'user-panel.html';
+          },
+           1000);
           return ;
         }
         else {
           eroare.style.color = 'red';
+          eroare.innerHTML = "Numele sau parola sunt incorecte.";
           if (!localStorage.getItem('incercari'))
             localStorage.setItem('incercari', 1);
           else {
@@ -61,15 +68,18 @@ function try_login() {
             else {
               document.getElementById("username").readOnly = true;
               document.getElementById("password").readOnly = true;
+              eroare.innerHTML += " Ați fost blocat pentru 5 secunde."
               setTimeout(function() {
                 document.getElementById("username").readOnly = false;
                 document.getElementById("password").readOnly = false;
+                eroare.style.color = 'blue';
+                eroare.innerHTML = "Ați fost deblocat. Încercați din nou.";
                 localStorage.setItem('incercari', 0);
               },
-               5000);
+               2000);
             }
           }
-          eroare.innerHTML = "Numele sau parola sunt incorecte.";
+
         }
     });
   })
@@ -83,23 +93,27 @@ function register() {
     return ;
   }
 
-  if (verify(user, pass))
+  if (verify(document.getElementById("username").value, document.getElementById("password").value))
   {
-    console.log("CEVA");
     eroare.style.color = 'red';
     eroare.innerHTML = "Numele și parola sunt invalide (conțin spații).";
     return ;
   }
 
   var newUser = {
+    type: create,
     username: document.getElementById("username").value,
-    password: document.getElementById("password").value
+    password: document.getElementById("password").value,
+    privilege: "user",
+    quizP: "0",
+    quizF: "0",
+    lastLogin: "0"
   }
 
   fetch('http://localhost:3000/users', {
     method: "post",
     headers: {
-      'Content-Type': 'application/json'
+        'Content-Type': 'application/json'
     },
     body: JSON.stringify(newUser)
   }).then(function(response) {
@@ -118,11 +132,6 @@ function register() {
 
 window.onload = function() {
   eroare = document.getElementById('eroare');
-  if (localStorage.getItem('inregistrat'))
-  {
-    eroare.style.color = 'red';
-    eroare.innerHTML = "S-a găsit un cont înregistrat pe acest browser.";
-  }
 
   document.getElementById("login").addEventListener("click", () => {
       try_login();
