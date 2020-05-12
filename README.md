@@ -46,7 +46,7 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Make / keep the code a little more readable.
   - [x] 404 page.
 
-### Note: Not all of the tasks listed above will be completed by the time I turn in the project. Maybe some of them will be never completed and get lost in time, like tears in the rain.
+### Note: Not all of the tasks listed above will be completed by the time I turn in the project.
 
 ## RESOURCES:
   * https://github.com/WebToLearn/laborator-tehnici-web
