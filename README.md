@@ -4,8 +4,6 @@ Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă d
 
 Toate datele sunt fictive, toate detaliile care pot părea personale (numere de telefon, nume, adrese) fiind alese aleator. Imaginile sunt preluate de pe Google Images.
 
-
-
 ## Tasks (English):
 
 ### HTML/CSS:
@@ -25,6 +23,10 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Local storage for quiz results.
   - [ ] Add support for additional answers.
 
+- [x] Use localStorage.
+- [x] AJAX (GET, POST, PUT, DELETE).
+- [x] DOM manipulation.
+
 ### NodeJs + Additional tasks:
   - [x] Port the AJAX requests to NodeJS
   - [x] User login system:
@@ -39,8 +41,10 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
 	- [ ] Show IP of last login.
 	- [ ] Add some animations on the website.
 
+
 ### Quality of Life:
   - [x] Make / keep the code a little more readable.
+  - [x] 404 page.
 
 ### Note: Not all of the tasks listed above will be completed by the time I turn in the project. Maybe some of them will be never completed and get lost in time, like tears in the rain.
 

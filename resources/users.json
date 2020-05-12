@@ -6,15 +6,39 @@
             "privilege": "admin",
             "quizP": "0",
             "quizF": "0",
-            "lastLogin": "11/05/2020 - 00:55:14"
+            "lastLogin": "12/05/2020 - 15:09:17"
         },
         {
             "username": "smitoi",
             "password": "smitoi",
             "privilege": "user",
-            "quizP": "2",
+            "quizP": "4",
+            "quizF": "3",
+            "lastLogin": "13/05/2020 - 01:12:27"
+        },
+        {
+            "username": "kal",
+            "password": "kal",
+            "privilege": "user",
+            "quizP": "9",
+            "quizF": "23",
+            "lastLogin": "12/05/2020 - 13:21:51"
+        },
+        {
+            "username": "cal",
+            "password": "cal",
+            "privilege": "user",
+            "quizP": "21",
+            "quizF": "6",
+            "lastLogin": "12/05/2020 - 13:26:13"
+        },
+        {
+            "username": "contNou",
+            "password": "contNou",
+            "privilege": "user",
+            "quizP": "0",
             "quizF": "1",
-            "lastLogin": "11/05/2020 - 00:55:36"
+            "lastLogin": "12/05/2020 - 15:04:13"
         }
     ]
 }

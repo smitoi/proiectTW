@@ -5,10 +5,17 @@ const cors = require("cors");
 const uuid = require("uuid");
 const fs = require("fs");
 const app = express();
+const path = require('path');
 
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static(__dirname));
+app.use(express.static('public'));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 app.get("/personal", (req, res) => {
   const personal = readJSONFile('Personal');
@@ -59,7 +66,6 @@ app.put("/users", (req, res) => {
       lastLogin: req.body.lastLogin
   }
 
-  console.log(user);
   for (let i = 0; i < users.length; i++)
   {
     if (users[i].username == user.username)
@@ -72,8 +78,6 @@ app.put("/users", (req, res) => {
         users[i].lastLogin = req.body.lastLogin;
     }
   }
-
-
     writeJSONFile(users, 'Users');
     res.status(200).send(user);
 });
@@ -146,8 +150,11 @@ function writeJSONFile(content, optiune) {
       }
     );
   }
-
 }
+
+app.get('*', function(req, res) {
+  res.status(404).sendFile(path.join(__dirname + '/err404.html'));
+});
 
 app.listen("3000", () =>
   console.log("Server started at: http://localhost:3000")

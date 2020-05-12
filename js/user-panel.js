@@ -49,12 +49,9 @@ function loadPage() {
         'Content-Type': 'application/json'
     },
   }).then(function(response) {
-    console.log(response);
     return response.json();
   }).then((json) => {
-    console.log(json);
-    if (json.privilege == 'user')
-    {
+    if (json.privilege == 'user') {
       let quizP = json.quizP;
       let quizF = json.quizF;
       let login = json.lastLogin;
@@ -100,6 +97,64 @@ function loadPage() {
       document.getElementById("quiz").addEventListener("click", () => {
         quiz();
       });
+    }
+    else if (json.privilege == 'admin')
+    {
+      let login = json.lastLogin;
+      let panel = document.getElementById("user-stats");
+      let element;
+
+      element = document.createElement("p");
+      element.style.color = 'black';
+      element.innerHTML = "Bun venit în contul tău de administrator, " + json.username + ".";
+      element.style.fontSize = "18px";
+      element.style.marginBottom = "0.1%";
+      panel.appendChild(element);
+
+      element = document.createElement("p");
+      element.style.color = "black";
+      element.innerHTML = "Ultimul login a avut loc la  " + login + ".";
+      element.style.marginTop = "0.1%";
+      panel.appendChild(element);
+
+      element = document.createElement("p");
+      element.style.color = 'black';
+      element.innerHTML = "Statisticile utilizatorilor:";
+      element.style.margin = "0.1%";
+      panel.appendChild(element);
+
+      fetch('http://localhost:3000/users').then(function(response) {
+          if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' + response.status);
+          }
+          response.json().then(function(data) {
+            let users = data;
+            let quizS = [0, 0];
+            for (var i = 0; i < users.length; i++)
+            {
+              quizS[0] += parseInt(users[i]['quizP']);
+              quizS[1] += parseInt(users[i]['quizF']);
+            }
+
+            element = document.createElement("p");
+            element.style.color = 'blue';
+            element.innerHTML = "S-au realizat " + (quizS[0] + quizS[1]) + " teste de legislație.";
+            element.style.margin = "0.1%";
+            panel.appendChild(element);
+
+            element = document.createElement("p");
+            element.style.color = 'green';
+            element.innerHTML = "Din ele, " + quizS[0] + " sunt trecute.";
+            element.style.margin = "0.1%";
+            panel.appendChild(element);
+
+            element = document.createElement("p");
+            element.style.color = 'red';
+            element.innerHTML = "Restul de " + quizS[1] + " sunt picate.";
+            element.style.margin = "0.1%";
+            panel.appendChild(element);
+        });
+      })
     }
 
     element = document.createElement("button");
@@ -149,6 +204,11 @@ function deleteAcc() {
 }
 
 window.onload = function() {
+  if (!localStorage.getItem('username'))
+  {
+    window.location.href = 'utilizatori.html';
+    return;
+  }
   updateLastLogin();
   loadPage();
 }

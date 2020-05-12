@@ -82,6 +82,7 @@ function prepare_quiz(optiune) {
     question_index = 1;
     answers_selected = [];
 
+    document.getElementById('inapoi').style.display = "none";
     var butoane = document.getElementById("quiz-prepare");
     butoane.style.display = "none";
     var butoane = document.getElementById("rezultat");
@@ -198,6 +199,7 @@ function end_quiz(why) {
     butoane.style.display = "flex";
     var butoane = document.getElementById("quiz");
     butoane.style.display = "none";
+    document.getElementById('inapoi').style.display = "block";
 
     if (aux == true) {
       var userUpdate = {
@@ -292,6 +294,12 @@ function skip_question() {
 }
 
 window.onload = function() {
+  if (!localStorage.getItem('username'))
+  {
+    window.location.href = 'utilizatori.html';
+    return;
+  }
+
   getQuestions();
 
   let rezList = document.getElementById("rezultat");
