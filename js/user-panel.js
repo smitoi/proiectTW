@@ -1,3 +1,7 @@
+if (!localStorage.getItem('username'))
+  window.location.href = 'utilizatori.html';
+
+
 function updateLastLogin() {
   let dat = new Date();
   let data = "";
@@ -89,7 +93,7 @@ function loadPage() {
       panel.appendChild(element);
 
       element = document.createElement("button");
-      element.innerHTML = "Începe test";
+      element.innerHTML = "Începe test <i class=\"fa fa-question-circle\"></i>";
       element.classList.add("blue-btn");
       element.id = "quiz";
       buttons.appendChild(element);
@@ -158,7 +162,7 @@ function loadPage() {
     }
 
     element = document.createElement("button");
-    element.innerHTML = "Log out";
+    element.innerHTML = "Log out <i class='fa fa-sign-out'></i>";
     element.classList.add("red-btn");
     element.id = "logout";
     buttons.appendChild(element);
@@ -168,7 +172,7 @@ function loadPage() {
 
     if (json.privilege == 'user') {
       element = document.createElement("button");
-      element.innerHTML = "Delete account";
+      element.innerHTML = "Delete account <i class='fa fa-trash'></i>";
       element.classList.add("red-btn");
       element.id = "delete";
       buttons.appendChild(element);
@@ -204,11 +208,7 @@ function deleteAcc() {
 }
 
 window.onload = function() {
-  if (!localStorage.getItem('username'))
-  {
-    window.location.href = 'utilizatori.html';
-    return;
-  }
+
   updateLastLogin();
   loadPage();
 }

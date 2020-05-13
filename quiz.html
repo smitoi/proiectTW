@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/footer-page.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/quiz.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
@@ -31,15 +32,15 @@
     </header>
 
     <nav id="menu">
-        <a class="menu-item" href="index.html">Acasă</a>
-        <a class="menu-item" href="permis.html">Permis auto</a>
-        <a class="menu-item menu-item-active" href="utilizatori.html">Utilizatori</a>
-        <a class="menu-item" href="personal.html">Personal</a>
+      <a class="menu-item" href="index.html">Acasă <i class="fa fa-home"></i></a>
+      <a class="menu-item " href="permis.html">Permis auto <i class="fa fa-car"></i></a>
+      <a class="menu-item menu-item-active" href="utilizatori.html">Utilizatori <i class="fa fa-users"></i></a>
+      <a class="menu-item" href="personal.html">Personal <i class="fa fa-briefcase"></i></a>
     </nav>
     <div id="instructiuni">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus. Cras a auctor ipsum, eu aliquet nunc. Cras accumsan orci non est auctor porttitor. Praesent luctus mollis scelerisque. Etiam congue arcu mi, a sagittis nisi iaculis et. Suspendisse non nunc aliquam, imperdiet enim eget, placerat magna. Nunc vitae eleifend augue. Vestibulum malesuada ac nulla et pharetra. Ut pretium ipsum ut arcu dictum
         hendrerit. Suspendisse tempus turpis vitae metus venenatis volutpat. Nunc consequat turpis quis velit blandit porttitor in sed urna. Nunc id fermentum metus. Nunc ut magna congue, scelerisque turpis sit amet, feugiat libero. Vivamus cursus felis sit amet aliquam imperdiet.<p>
-        <button id = "inapoi" class = "buton" onclick="window.location.href = 'user-panel.html'">MERGI ÎNAPOI</button>
+        <button id = "inapoi" class = "buton" onclick="window.location.href = 'user-panel.html'">MERGI ÎNAPOI <i class="fa fa-chevron-left"></i></button>
     </div>
     <ul id="rezultat">
     </ul>
@@ -50,10 +51,10 @@
     </div>
     <div id="quiz">
         <div id="stats">
-            <p id="timp-ramas">TIMP RĂMAS: <span id="RT"></span></p>
-            <p id="intrebari-ramase">ÎNTREBĂRI RĂMASE: <span id="RQ"></span></p>
-            <p id="intrebari-corecte">ÎNTREBĂRI CORECTE: <span id="CQ"></span></p>
-            <p id="intrebari-gresite">ÎNTREBĂRI GREȘITE: <span id="WQ"></span></p>
+            <p id="timp-ramas"><i class="fa fa-hourglass"></i> TIMP RĂMAS: <span id="RT"></span></p>
+            <p id="intrebari-ramase"><i class="fa fa-question"></i> ÎNTREBĂRI RĂMASE: <span id="RQ"></span></p>
+            <p id="intrebari-corecte"><i class="fa fa-check"></i> ÎNTREBĂRI CORECTE: <span id="CQ"></span></p>
+            <p id="intrebari-gresite"><i class="fa fa-times"></i> ÎNTREBĂRI GREȘITE: <span id="WQ"></span></p>
         </div>
         <div id="question">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et leo sit amet odio aliquet volutpat. Integer non malesuada erat, in viverra lectus.
@@ -76,13 +77,13 @@
         </div>
         <div id="quiz-control">
             <button class="buton-control gray-btn" id="skip_intrebare">
-                RĂSPUNDE MAI TÂRZIU
+                <i class="fa fa-hourglass"></i> RĂSPUNDE MAI TÂRZIU
             </button>
             <button class="buton-control red-btn" id="sterge_rasp">
-                ȘTERGE RĂSPUNSURI
+                <i class="fa fa-times"></i> ȘTERGE RĂSPUNSURI
             </button>
             <button class="buton-control green-btn" id="trimite_rasp">
-                TRIMITE RĂSPUNSURI
+                <i class="fa fa-check"></i> TRIMITE RĂSPUNSURI
             </button>
         </div>
     </div>

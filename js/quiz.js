@@ -17,6 +17,9 @@ var minute;
 var secunde;
 var rezultate;
 
+if (!localStorage.getItem('username'))
+  window.location.href = 'utilizatori.html';
+
 // Preluăm întrebările
 function getQuestions () {
   fetch('http://localhost:3000/questions').then(function(response) {
@@ -294,12 +297,6 @@ function skip_question() {
 }
 
 window.onload = function() {
-  if (!localStorage.getItem('username'))
-  {
-    window.location.href = 'utilizatori.html';
-    return;
-  }
-
   getQuestions();
 
   let rezList = document.getElementById("rezultat");
