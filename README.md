@@ -45,6 +45,7 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
 ### Quality of Life:
   - [x] Make / keep the code a little more readable.
   - [x] 404 page.
+  - [x] Font Awesome icons.
 
 ### Note: Not all of the tasks listed above will be completed by the time I turn in the project.
 
