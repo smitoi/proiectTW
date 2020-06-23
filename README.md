@@ -1,5 +1,8 @@
 # Proiect pentru laboratorul de Tehnici Web din cadrul FMI - UniBuc
 
+![](https://img.shields.io/github/repo-size/smitoi/proiectTW) ![](https://img.shields.io/github/last-commit/smitoi/proiectTW) ![](https://tokei.rs/b1/github/smitoi/proiectTW)
+
+
 Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă dotările și personalul școlii. De asemenea, există un sistem de register / login și o aplicație JavaScript ce permite utilizatorilor să susțină teste de legislație simulate. Mai jos sunt cerințele ce au trebuit să fie atinse în cadrul proiectului.
 
 Toate datele sunt fictive, toate detaliile care pot părea personale (numere de telefon, nume, adrese) fiind alese aleator. Imaginile sunt preluate de pe Google Images.
