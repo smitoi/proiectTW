@@ -1,6 +1,6 @@
 # Proiect pentru laboratorul de Tehnici Web din cadrul FMI - UniBuc
 
-Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă dotările și personalul școlii. De asemenea, există o aplicație JavaScript ce permite utilizatorilor să susțină teste de legislație simulate (deocamdată ele au formatul de "Întrebare <listă răspunsuri corecte>" pentru testare). Site-ul poate fi văzut [aici](https://smitoi.github.io/proiectTW).
+Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă dotările și personalul școlii. De asemenea, există o aplicație JavaScript ce permite utilizatorilor să susțină teste de legislație simulate (deocamdată ele conțin formatul 'Întrebare <nr.>' pentru testare - răspunsurile sunt cele marcate cu steluță). Mai jos sunt cerințele ce au trebuit să fie atinse în cadrul proiectului.
 
 Toate datele sunt fictive, toate detaliile care pot părea personale (numere de telefon, nume, adrese) fiind alese aleator. Imaginile sunt preluate de pe Google Images.
 
@@ -11,9 +11,8 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Website-ul trebuie să fie responsiv.
   - [x] Meniu dropdown (cu puțin Javascript)
 
-
 ### JavaScript:
-- [x] Aplicație de tip quiz.
+- [x] Aplicație (am ales una de tip quiz).
 - [x] Folosim localStorage.
 - [x] AJAX (GET, POST, PUT, DELETE).
 - [x] Manipulare DOM.
