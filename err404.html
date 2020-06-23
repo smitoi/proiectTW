@@ -10,8 +10,8 @@
     const inv = setInterval(move, 5);
     posX = 0;
     posY = 0;
-    movX = 1;
-    movY = 1;
+    movX = 2.5;
+    movY = 2.5;
   }
 
 
@@ -27,13 +27,13 @@
     text.style.left = posY + "px";
 
     if (posX > height - 256)
-      movX = -1;
+      movX = -2.5;
     else if (posX < 0)
-      movX = 1;
+      movX = 2.5;
     else if (posY > width - 256)
-      movY = -1;
+      movY = -2.5;
     else if (posY < 0)
-      movY = 1;
+      movY = 2.5;
   }
 </script>
 <style>

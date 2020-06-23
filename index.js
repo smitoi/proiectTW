@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname));
 app.use(express.static('public'));
+app.set('trust proxy',true);
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -63,7 +64,8 @@ app.put("/users", (req, res) => {
       username: req.body.username,
       quizP: req.body.quizP,
       quizF: req.body.quizF,
-      lastLogin: req.body.lastLogin
+      lastLogin: req.body.lastLogin,
+      lastIp: req.ip
   }
 
   for (let i = 0; i < users.length; i++)
@@ -75,11 +77,14 @@ app.put("/users", (req, res) => {
       else if (req.body.quizF != undefined)
         users[i].quizF = String(parseInt(users[i].quizF) + req.body.quizF);
       else if (req.body.lastLogin != undefined)
+      {
         users[i].lastLogin = req.body.lastLogin;
+        users[i].lastIp = req.ip;
+      }
     }
-  }
     writeJSONFile(users, 'Users');
     res.status(200).send(user);
+  }
 });
 
 app.post("/users", (req, res) => {

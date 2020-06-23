@@ -22,7 +22,7 @@ if (!localStorage.getItem('username'))
 
 // Preluăm întrebările
 function getQuestions () {
-  fetch('http://localhost:3000/questions').then(function(response) {
+  fetch('/questions').then(function(response) {
       if (response.status !== 200) {
         console.log('Looks like there was a problem. Status Code: ' + response.status);
         return;
@@ -217,7 +217,7 @@ function end_quiz(why) {
       };
     }
 
-    fetch('http://localhost:3000/users', {
+    fetch('/users', {
       method: "put",
       headers: {
           'Content-Type': 'application/json'

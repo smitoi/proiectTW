@@ -6,6 +6,46 @@ function verify(user, pass)
   user == "" || pass == "");
 }
 
+function updateLastLogin() {
+  let dat = new Date();
+  let data = "";
+
+  if (dat.getDate() < 10)
+    data = "0" + dat.getDate();
+  else
+    data = dat.getDate();
+    if ((dat.getMonth() + 1) < 10)
+      data += "/0" + (dat.getMonth() + 1);
+    else
+      data += "/" + (dat.getMonth() + 1);
+  data += "/" + dat.getFullYear()  + " - ";
+  if (dat.getHours() < 10)
+    data += "0" + dat.getHours();
+  else
+    data += dat.getHours();
+  if (dat.getMinutes() < 10)
+    data += ":0" + dat.getMinutes();
+  else
+    data += ":" + dat.getMinutes();
+  if (dat.getSeconds() < 10)
+    data += ":0" + dat.getSeconds();
+  else
+    data += ":" + dat.getSeconds();
+
+  var userUpdate = {
+    username: localStorage.getItem('username'),
+    lastLogin: data
+  }
+
+  fetch('/users', {
+    method: "put",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userUpdate)
+  }).then(function(response) {})
+}
+
 function try_login() {
   let user = document.getElementById("username").value;
   let pass = document.getElementById("password").value;
@@ -17,7 +57,7 @@ function try_login() {
     return ;
   }
 
-  fetch('http://localhost:3000/users', {
+  fetch('/users', {
     method: 'get'
   }).then(function(response) {
       if (response.status !== 200) {
@@ -48,6 +88,7 @@ function try_login() {
           localStorage.setItem('password', pass);
           localStorage.setItem('privilege', contCorect);
           localStorage.setItem('incercari', 0);
+          updateLastLogin();
           setTimeout(function() {
             window.location.href = 'user-panel.html';
           },
@@ -109,7 +150,7 @@ function register() {
     lastLogin: "0"
   }
 
-  fetch('http://localhost:3000/users', {
+  fetch('/users', {
     method: "post",
     headers: {
         'Content-Type': 'application/json'

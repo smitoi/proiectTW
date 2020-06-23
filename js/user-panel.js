@@ -1,53 +1,12 @@
 if (!localStorage.getItem('username'))
   window.location.href = 'utilizatori.html';
 
-
-function updateLastLogin() {
-  let dat = new Date();
-  let data = "";
-
-  if (dat.getDate() < 10)
-    data = "0" + dat.getDate();
-  else
-    data = dat.getDate();
-    if ((dat.getMonth() + 1) < 10)
-      data += "/0" + (dat.getMonth() + 1);
-    else
-      data += "/" + (dat.getMonth() + 1);
-  data += "/" + dat.getFullYear()  + " - ";
-  if (dat.getHours() < 10)
-    data += "0" + dat.getHours();
-  else
-    data += dat.getHours();
-  if (dat.getMinutes() < 10)
-    data += ":0" + dat.getMinutes();
-  else
-    data += ":" + dat.getMinutes();
-  if (dat.getSeconds() < 10)
-    data += ":0" + dat.getSeconds();
-  else
-    data += ":" + dat.getSeconds();
-
-  var userUpdate = {
-    username: localStorage.getItem('username'),
-    lastLogin: data
-  }
-
-  fetch('http://localhost:3000/users', {
-    method: "put",
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(userUpdate)
-  }).then(function(response) {})
-}
-
 function loadPage() {
   let buttons = document.getElementById("user-buttons");
   let userRetrive = {
     username: localStorage.getItem('username')
   };
-  fetch('http://localhost:3000/users/' + localStorage.getItem('username'), {
+  fetch('/users/' + localStorage.getItem('username'), {
     method: "get",
     headers: {
         'Content-Type': 'application/json'
@@ -59,6 +18,7 @@ function loadPage() {
       let quizP = json.quizP;
       let quizF = json.quizF;
       let login = json.lastLogin;
+      let ip = json.lastIp;
       let panel = document.getElementById("user-stats");
       let element;
 
@@ -88,7 +48,7 @@ function loadPage() {
 
       element = document.createElement("p");
       element.style.color = "black";
-      element.innerHTML = "Ultimul login a avut loc la  " + login + ".";
+      element.innerHTML = "Ultimul login a avut loc la  " + login + " de pe IP-ul " + ip + ".";
       element.style.margin = "0.1%";
       panel.appendChild(element);
 
@@ -127,7 +87,7 @@ function loadPage() {
       element.style.margin = "0.1%";
       panel.appendChild(element);
 
-      fetch('http://localhost:3000/users').then(function(response) {
+      fetch('/users').then(function(response) {
           if (response.status !== 200) {
             console.log('Looks like there was a problem. Status Code: ' + response.status);
           }
@@ -197,7 +157,7 @@ function logout() {
 }
 
 function deleteAcc() {
-  fetch('http://localhost:3000/users/' + localStorage.getItem('username'), {
+  fetch('/users/' + localStorage.getItem('username'), {
         method: 'delete',
         headers: {
             'Content-Type': 'application/json'
@@ -208,7 +168,5 @@ function deleteAcc() {
 }
 
 window.onload = function() {
-
-  updateLastLogin();
   loadPage();
 }
