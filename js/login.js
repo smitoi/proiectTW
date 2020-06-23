@@ -172,7 +172,7 @@ function register() {
 
 window.onload = function() {
   if (localStorage.getItem('username')) {
-    window.location.href = 'user-panel.html';
+    window.location.href = 'user-panel';
     return ;
   }
 

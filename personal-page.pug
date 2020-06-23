@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/header-page.css">
-    <link rel="stylesheet" href="css/footer-page.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="/css/header-page.css">
+    <link rel="stylesheet" href="/css/footer-page.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/personal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/personal.js"></script>
     <title>Școala Best Auto</title>
 </head>
 
@@ -28,25 +27,43 @@
     </header>
 
     <nav id="menu">
-      <a class="menu-item" href="/">Acasă <i class="fa fa-home"></i></a>
-      <a class="menu-item " href="permis">Permis auto <i class="fa fa-car"></i></a>
-      <a class="menu-item" href="utilizatori">Utilizatori <i class="fa fa-users"></i></a>
-      <a class="menu-item menu-item-active" href="personal-page">Personal <i class="fa fa-briefcase"></i></a>
+      <a class="menu-item" href="../">Acasă <i class="fa fa-home"></i></a>
+      <a class="menu-item " href="../permis">Permis auto <i class="fa fa-car"></i></a>
+      <a class="menu-item " href="../utilizatori">Utilizatori <i class="fa fa-users"></i></a>
+      <a class="menu-item menu-item-active" href="../personal-page">Personal <i class="fa fa-briefcase"></i></a>
+      <script type="text/javascript" src="js/completare.js"></script>
     </nav>
-    <div id="dropdown">
-        <button id="dropdown-menu-button">Alegeți personalul</button>
-        <div id="dropdown-menu-item">
-            <a href="javascript:showInstructori('Personal')">Tot Personalul</a>
-        </div>
-    </div>
-    <br class="break">
-    <br class="break">
-    <br class="break">
-    <br class="break">
-    <div id="personal-table">
-
-    </div>
     <br>
+    <div id="prima-sectiune">
+      <img class="poza-profil" src=#{profil}>
+      <div id="detalii">
+        <h1 id="nume">#{nume}</h1>
+        <p>Vârstă: #{varsta}</p>
+        if disponibil
+          p
+            | Disponibilitate:
+            span(style='color:green')  DA
+        else
+          p
+            | Disponibilitate:
+            span(style='color:red')  NU
+        <p>Nr. telefon: #{telefon}</p>
+        <div>
+          <p>Alți colegi: </p>
+          ul
+            for coleg in colegi
+              - var url = coleg.nr
+              <li><a href="/personal-page/#{url}">#{coleg.nume}</a></li>
+        </div>
+      </div>
+      <img class="poza-masina" src="#{masina}">
+    </div>
+
+    <div id="a-doua-sectiune">
+      <p id="paragraf1">#{text1}</p>
+      <p id="paragraf2">#{text2}</p>
+    </div>
+
     <br>
     <footer id="footer">
         <div id="program">

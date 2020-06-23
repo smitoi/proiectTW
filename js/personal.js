@@ -42,6 +42,9 @@ function drawPersonal()
           telefon.style.textAlign = "center";
           telefon.innerHTML = personal[locatie][jndex]['numar'];
 
+          let a = document.createElement('a');
+          a.href = "personal-page" + '/' + personal[locatie][jndex]['id'];
+
           let img = document.createElement("img");
           img.src = personal[locatie][jndex]['img'];
           img.alt = "Avatar";
@@ -52,7 +55,8 @@ function drawPersonal()
           text.appendChild(masina);
           text.appendChild(telefon);
           over.appendChild(text);
-          pers.appendChild(img);
+          pers.appendChild(a);
+          a.appendChild(img);
           pers.appendChild(over);
 
           element.appendChild(pers);

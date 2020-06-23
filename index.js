@@ -6,6 +6,7 @@ const uuid = require("uuid");
 const fs = require("fs");
 const app = express();
 const path = require('path');
+const pug = require('pug');
 
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
@@ -17,6 +18,59 @@ app.set('trust proxy',true);
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+
+app.get("/permis", (req, res) => {
+    res.sendFile(path.join(__dirname + '/permis.html'));
+});
+
+app.get("/utilizatori", (req, res) => {
+    res.sendFile(path.join(__dirname + '/utilizatori.html'));
+});
+
+app.get("/user-panel", (req, res) => {
+    res.sendFile(path.join(__dirname + '/user-panel.html'));
+});
+
+app.get("/quiz", (req, res) => {
+    res.sendFile(path.join(__dirname + '/quiz.html'));
+});
+
+app.get("/permis", (req, res) => {
+    res.sendFile(path.join(__dirname + '/permis.html'));
+});
+
+app.get("/personal-page", (req, res) => {
+    res.sendFile(path.join(__dirname + '/personal.html'));
+});
+
+app.get("/personal-page/:id", (req, res) => {
+  const personal = readJSONFile('Personal-Detaliat');
+  const compiledFunction = pug.compileFile('personal-page.pug');
+  var id = req.params.id;
+  var colegi = [];
+
+  if (id > personal.length)
+    res.status(404).send("No person found with this id!");
+
+  for (let i = 0; i < personal.length; i++)
+  {
+    if (i != id && personal[i].zona == personal[id].zona)
+      colegi.push({'nume': personal[i].nume, 'nr': i});
+  }
+  res.status(200).send(pug.renderFile('personal-page.pug', {
+    nume: personal[id].nume,
+    varsta: personal[id].varsta,
+    disponibil: personal[id].disponibil,
+    telefon: personal[id].nrtel,
+    text1: personal[id].descriere1,
+    text2: personal[id].descriere2,
+    masina: personal[id].masina,
+    profil: personal[id].profil,
+    colegi: colegi
+  }));
+
+});
+
 
 app.get("/personal", (req, res) => {
   const personal = readJSONFile('Personal');
@@ -139,6 +193,8 @@ function readJSONFile(optiune) {
 		return JSON.parse(fs.readFileSync("resources/questions.json"))["questions"];
   else if (optiune == 'Users')
     return JSON.parse(fs.readFileSync("resources/users.json"))["users"];
+  else if (optiune == 'Personal-Detaliat')
+    return JSON.parse(fs.readFileSync("resources/personal-detaliat.json"))["personal"];
 }
 
 function writeJSONFile(content, optiune) {
