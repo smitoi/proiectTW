@@ -1,6 +1,9 @@
 # Proiect pentru laboratorul de Tehnici Web din cadrul FMI - UniBuc
 
-Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă dotările și personalul școlii. De asemenea, există o aplicație JavaScript ce permite utilizatorilor să susțină teste de legislație simulate (deocamdată ele conțin formatul 'Întrebare <nr.>' pentru testare - răspunsurile sunt cele marcate cu steluță). Mai jos sunt cerințele ce au trebuit să fie atinse în cadrul proiectului.
+![](https://img.shields.io/github/repo-size/smitoi/proiectTW) ![](https://img.shields.io/github/last-commit/smitoi/proiectTW) ![](https://tokei.rs/b1/github/smitoi/proiectTW)
+
+
+Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă dotările și personalul școlii. De asemenea, există un sistem de register / login și o aplicație JavaScript ce permite utilizatorilor să susțină teste de legislație simulate. Mai jos sunt cerințele ce au trebuit să fie atinse în cadrul proiectului.
 
 Toate datele sunt fictive, toate detaliile care pot părea personale (numere de telefon, nume, adrese) fiind alese aleator. Imaginile sunt preluate de pe Google Images.
 
@@ -22,14 +25,14 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Request-uri de tip AJAX cu NodeJs.
   - [x] Sistem de login / register.
 
-## Task-uri examen (6p / 6p):
-  - [x] I. 6 - Numărătoare inversă (la timer-ul de la quiz) - 0.5p
-  - [x] II. 3 - Animație treptată titlu (titlul de pe pagina principală) - 1p
-  - [x] III. 1 - Animație complexă (pagina 404) - 1,5p
-  - [x] III. 2 - Quiz (pentru utilizatorii logați) - 1,5p
-  - [x] III. 8 - IP și timpul de la ultima logare (pe pagina utilizatorului) - 1,5p
-  - [ ] III. 14 - Pagină de high scores (vizibilă doar pentru administrator) - 1,5p
-  - [ ] V. 3 - Generare de pagini pe baza unui template (pentru pagina personal) - 2,5p
+## Task-uri examen (8,5p / 6p):
+  - [x] I. 6 - Numărătoare inversă (la timer-ul de la quiz - în funcție de quiz e un timer diferit) - 0.5p
+  - [x] II. 3 - Animație treptată titlu (titlul de pe pagina principală - se adaugă câte o literă, printre care și spațiul, deci poate părea aiurea) - 1p
+  - [x] III. 1 - Animație complexă (pagina 404 - apasă pe mașinuță pentru a reveni la pagina principală) - 1,5p
+  - [x] III. 2 - Quiz (pentru utilizatorii logați - răspunsurile sunt cu '*', întrebările sunt alese random din 100 de intrări) - 1,5p
+  - [x] III. 8 - IP și timpul de la ultima logare (pe pagina utilizatorului - se arată doar ultima logare, nu ultima activitate) - 1,5p
+  - [ ] III. 14 - Pagină de high scores (vizibilă doar pentru administrator - arată toți utilizatorii ordonați după scoruile de la quiz-uri) - 1,5p
+  - [x] V. 3 - Generare de pagini pe baza unui template (pentru pagina personal, se poate apăsa pe personaje - template-urile sunt realizate cu Jade/Pug) - 2,5p
 
 
 ## RESOURCES:
@@ -40,3 +43,4 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   * https://codepen.io/
   * https://joshzeigler.com/technology/web-development/how-big-is-too-big-for-json
   * https://jsoneditoronline.org/
+  * https://pugjs.org/api/getting-started.html
