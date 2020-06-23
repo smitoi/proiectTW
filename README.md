@@ -4,50 +4,34 @@ Am realizat site-ul unei școli auto fictive din București. Site-ul prezintă d
 
 Toate datele sunt fictive, toate detaliile care pot părea personale (numere de telefon, nume, adrese) fiind alese aleator. Imaginile sunt preluate de pe Google Images.
 
-## Tasks (English):
+## Cerințe proiect (3.9 / 4p):
 
 ### HTML/CSS:
+  - [x] HTML / CSS.
+  - [x] Website-ul trebuie să fie responsiv.
+  - [x] Meniu dropdown (cu puțin Javascript)
 
-  - [x] Static website using pure HTML / CSS
-  - [x] Make website responsive + add animation
 
 ### JavaScript:
-- [x] Dropdown menu with JavaScript
-  - [x] Make dropdown menu dynamically generated using a database (simulated using a .json file and AJAX requests).
-
-- [x] Quiz app with JavaScript
-  - [x] Make quiz app responsive.
-  - [x] Add support for questions with images.
-  - [x] Add timer for quiz.
-  - [x] Get questions from database (simulated using a .json file and AJAX requests).
-  - [x] Local storage for quiz results.
-  - [ ] Add support for additional answers.
-
-- [x] Use localStorage.
+- [x] Aplicație de tip quiz.
+- [x] Folosim localStorage.
 - [x] AJAX (GET, POST, PUT, DELETE).
-- [x] DOM manipulation.
+- [x] Manipulare DOM.
 
-### NodeJs + Additional tasks:
-  - [x] Port the AJAX requests to NodeJS
-  - [x] User login system:
-    - [x] Make login system (register + login).
-	- [x] Create user panel.
-    - [ ] Add admin panel for user control.
-    - [x] Different user privileges (Guest, User, Employee, Admin).
-    - [x] Check failed login attempts.
-    - [ ] Logging actions (view page, take quiz, etc.).
-    - [ ] Generate page based on template (for Employees).
-    - [x] Showing timestamp of last login.
-	- [ ] Show IP of last login.
-	- [ ] Add some animations on the website.
+### NodeJs:
+  - [x] Bază de date simulată cu JSON-uri.
+  - [x] Request-uri de tip AJAX cu NodeJs.
+  - [x] Sistem de login / register.
 
+## Task-uri examen (6p / 6p):
+  - [x] I. 6 - Numărătoare inversă (la timer-ul de la quiz) - 0.5p
+  - [x] II. 3 - Animație treptată titlu (titlul de pe pagina principală) - 1p
+  - [x] III. 1 - Animație complexă (pagina 404) - 1,5p
+  - [x] III. 2 - Quiz (pentru utilizatorii logați) - 1,5p
+  - [x] III. 8 - IP și timpul de la ultima logare (pe pagina utilizatorului) - 1,5p
+  - [ ] III. 14 - Pagină de high scores (vizibilă doar pentru administrator) - 1,5p
+  - [ ] V. 3 - Generare de pagini pe baza unui template (pentru pagina personal) - 2,5p
 
-### Quality of Life:
-  - [x] Make / keep the code a little more readable.
-  - [x] 404 page.
-  - [x] Font Awesome icons.
-
-### Note: Not all of the tasks listed above will be completed by the time I turn in the project.
 
 ## RESOURCES:
   * https://github.com/WebToLearn/laborator-tehnici-web
