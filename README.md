@@ -22,7 +22,7 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] Request-uri de tip AJAX cu NodeJs.
   - [x] Sistem de login / register.
 
-## Task-uri examen (6p / 6p):
+## Task-uri examen (8,5p / 6p):
   - [x] I. 6 - Numărătoare inversă (la timer-ul de la quiz - în funcție de quiz e un timer diferit) - 0.5p
   - [x] II. 3 - Animație treptată titlu (titlul de pe pagina principală - se adaugă câte o literă, printre care și spațiul, deci poate părea aiurea) - 1p
   - [x] III. 1 - Animație complexă (pagina 404 - apasă pe mașinuță pentru a reveni la pagina principală) - 1,5p
