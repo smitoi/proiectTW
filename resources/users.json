@@ -6,40 +6,35 @@
             "privilege": "admin",
             "quizP": "0",
             "quizF": "0",
-            "lastLogin": "15/05/2020 - 17:22:09"
+            "lastLogin": "24/06/2020 - 19:45:19",
+            "lastIp": "::1"
         },
         {
             "username": "smitoi",
             "password": "smitoi",
             "privilege": "user",
-            "quizP": "5",
-            "quizF": "4",
-            "lastLogin": "23/06/2020 - 17:20:24",
-            "lastIp": "::ffff:127.0.0.1"
+            "quizP": "1",
+            "quizF": "0",
+            "lastLogin": "24/06/2020 - 19:44:20",
+            "lastIp": "82.137.14.141"
         },
         {
-            "username": "kal",
-            "password": "kal",
-            "privilege": "user",
-            "quizP": "9",
-            "quizF": "23",
-            "lastLogin": "12/05/2020 - 13:21:51"
-        },
-        {
-            "username": "cal",
-            "password": "cal",
-            "privilege": "user",
-            "quizP": "21",
-            "quizF": "6",
-            "lastLogin": "12/05/2020 - 13:26:13"
-        },
-        {
-            "username": "contNou",
-            "password": "contNou",
+            "username": "test2",
+            "password": "test2",
             "privilege": "user",
             "quizP": "0",
-            "quizF": "1",
-            "lastLogin": "12/05/2020 - 15:04:13"
+            "quizF": "0",
+            "lastLogin": "24/06/2020 - 15:04:20",
+            "lastIp": "79.115.35.209"
+        },
+        {
+            "username": "test1",
+            "password": "test1",
+            "privilege": "user",
+            "quizP": "0",
+            "quizF": "0",
+            "lastLogin": "24/06/2020 - 15:04:20",
+            "lastIp": "79.115.35.209"
         }
     ]
 }

@@ -31,13 +31,13 @@ Toate datele sunt fictive, toate detaliile care pot părea personale (numere de 
   - [x] III. 1 - Animație complexă (pagina 404 - apasă pe mașinuță pentru a reveni la pagina principală) - 1,5p
   - [x] III. 2 - Quiz (pentru utilizatorii logați - răspunsurile sunt cu '*', întrebările sunt alese random din 100 de intrări) - 1,5p
   - [x] III. 8 - IP și timpul de la ultima logare (pe pagina utilizatorului - se arată doar ultima logare, nu ultima activitate) - 1,5p
-  - [ ] III. 14 - Pagină de high scores (vizibilă doar pentru administrator - arată toți utilizatorii ordonați după scoruile de la quiz-uri) - 1,5p
+  - [x] III. 14 - Pagină de high scores (vizibilă doar pentru administrator - arată toți utilizatorii ordonați după scoruile de la quiz-uri, dacă apeși pe numele unui utilizator i se resetează scorul) - 1,5p
   - [x] V. 3 - Generare de pagini pe baza unui template (pentru pagina personal, se poate apăsa pe personaje - template-urile sunt realizate cu Jade/Pug) - 2,5p
 
 
 ## RESOURCES:
   * https://github.com/WebToLearn/laborator-tehnici-web
-  * https://www.w3schools.com/ 
+  * https://www.w3schools.com/
   * https://www.freecodecamp.org/
   * https://stackoverflow.com/
   * https://codepen.io/

@@ -51,3 +51,13 @@
   background-color: white;
   color: #40476d;
 }
+
+@media all and (max-width: 768px) {
+    .red-btn, .blue-btn {
+        width: 80%;
+   }
+    .buton, .buton-control, .buton-quiz {
+        margin-top: 5%;
+        margin-bottom: 5%;
+   }
+}

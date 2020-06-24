@@ -146,8 +146,8 @@
  .quiz-buton {
      display: none;
 }
- @media all and (max-width: 768px) {
-     .quiz, .quiz-control, #quiz-prepare, .stats, .quiz-questions {
+@media all and (max-width: 768px) {
+     #quiz, #quiz-control, #quiz-prepare, #stats, #quiz-questions {
          flex-direction: column;
          align-items: center;
          margin-top: 5%;

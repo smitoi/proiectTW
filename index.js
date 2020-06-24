@@ -127,17 +127,23 @@ app.put("/users", (req, res) => {
     if (users[i].username == user.username)
     {
       if (req.body.quizP != undefined)
-        users[i].quizP = String(parseInt(users[i].quizP) + req.body.quizP);
-      else if (req.body.quizF != undefined)
-        users[i].quizF = String(parseInt(users[i].quizF) + req.body.quizF);
-      else if (req.body.lastLogin != undefined)
+        if (req.body.quizP != 0)
+          users[i].quizP = String(parseInt(users[i].quizP) + req.body.quizP);
+        else
+          users[i].quizP = String(0);
+      if (req.body.quizF != undefined)
+        if (req.body.quizF != 0)
+          users[i].quizF = String(parseInt(users[i].quizF) + req.body.quizF);
+        else
+          users[i].quizF = String(0);
+      if (req.body.lastLogin != undefined)
       {
         users[i].lastLogin = req.body.lastLogin;
         users[i].lastIp = req.ip;
       }
     }
     writeJSONFile(users, 'Users');
-    res.status(200).send(user);
+    res.status(200).send();
   }
 });
 

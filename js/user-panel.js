@@ -1,6 +1,24 @@
 if (!localStorage.getItem('username'))
   window.location.href = 'utilizatori.html';
 
+function resetAcc(nume) {
+    var userUpdate = {
+      username: nume,
+      quizP: 0,
+      quizF: 0,
+      lastIp: 'reset'
+    };
+    fetch('/users', {
+      method: "put",
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userUpdate)
+    }).then(function(response) {
+      window.location.reload();
+  });
+}
+
 function loadPage() {
   let buttons = document.getElementById("user-buttons");
   let userRetrive = {
@@ -117,6 +135,44 @@ function loadPage() {
             element.innerHTML = "Restul de " + quizS[1] + " sunt picate.";
             element.style.margin = "0.1%";
             panel.appendChild(element);
+
+            element = document.createElement("div");
+            element.style.margin = "1%";
+            panel.appendChild(element);
+
+            element = document.createElement("p");
+            element.style.color = 'black';
+            element.innerHTML = "Topul utilizatorilor este: ";
+            element.style.margin = "0.1%";
+            panel.appendChild(element);
+
+            var k = 0;
+            while (users.length > 1)
+            {
+              var min = -1;
+              var minP = 0;
+              k++;
+
+              for (var i = 1; i < users.length; i++)
+                if (users[i]['privilege'] != 'admin')
+                  if (min['quizP'] - min['quizF'] < users[i]['quizP'] - users[i]['quizF'] || min == -1)
+                  {
+                    min = users[i];
+                    minP = i;
+                  }
+
+              element = document.createElement("p");
+              element.innerHTML = k + '. ' + "<a href=javascript:resetAcc('" + min['username'] + "')>" + min['username'] + "</a>" + ' are scorul ';
+              if (min['quizP'] - min['quizF'] > 0)
+                element.innerHTML += "<span style=\"color:green\">" + (min['quizP'] - min['quizF']) + "</span>";
+              else
+                element.innerHTML += "<span style=\"color:red\">" + (min['quizP'] - min['quizF']) + "</span>";
+              element.style.margin = "0.1%";
+              panel.appendChild(element);
+
+              users.splice(minP, 1);
+              console.log(users);
+            }
         });
       })
     }
